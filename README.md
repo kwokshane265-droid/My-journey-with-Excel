@@ -32,6 +32,9 @@ This project marks my first experience using Excel for data analysis. After comp
 ```
 The above formula was used to deliver the Output "Median Salary" and a similar formula was used to deliver "Job Count" (median was replaced with count)
 
+---
+
+## [Project 2](Data Skills Analysis Project)
 
 #### How to create the highlighted bar charts?
 <img width="1571" height="407" alt="Screenshot 2026-09-02 205625" src="https://github.com/user-attachments/assets/f4586ab6-f4cf-41c5-bf5a-338fba1375fd" />
