@@ -32,12 +32,24 @@ This project marks my first experience using Excel for data analysis. After comp
 ```
 The above formula was used to deliver the Output "Median Salary" and a similar formula was used to deliver "Job Count" (median was replaced with count)
 
----
-
-## [Project 2](Data Skills Analysis Project)
-
 #### How to create the highlighted bar charts?
 <img width="1571" height="407" alt="Screenshot 2026-09-02 205625" src="https://github.com/user-attachments/assets/f4586ab6-f4cf-41c5-bf5a-338fba1375fd" />
 Above is the method in which I created Bar charts that would have 1 data point highlighted. (From left to right).
 
 Essentially, there are 2 series being displayed, each showing a different color. One is responsible for all the "Non-focus" items. Another is responsible for ONLY the "Focus Item".
+
+---
+
+## [Project 2](Data Skills Analysis Project)
+
+All data used was processed with Power Query, Power Pivot and DAX. 
+Power Query was used to disect
+<img width="1175" height="438" alt="Screenshot 2026-09-02 233508" src="https://github.com/user-attachments/assets/a37602cc-ad92-43d4-aa9f-de8ffbe94a92" />
+
+<img width="952" height="380" alt="Screenshot 2026-09-02 233518" src="https://github.com/user-attachments/assets/67e0ebda-d560-473c-9275-53c668ccb9f5" />
+
+<img width="1322" height="400" alt="Screenshot 2026-09-02 233548" src="https://github.com/user-attachments/assets/eaacd2d3-b451-4cdc-a518-1d511674142a" />
+
+<img width="1450" height="442" alt="Screenshot 2026-09-02 233535" src="https://github.com/user-attachments/assets/396b1ddb-97e4-46a4-8a5e-5650c2a80a8b" />
+
+
