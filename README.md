@@ -42,7 +42,7 @@ The above formula was used to deliver the Output "Median Salary".
   )
  ) 
 ```
-The above formula is similar to previous and performs "Count" instead of "Median", which is what counted the job count.
+The above formula is similar to previous and performs "Count" instead of "Median", which is what calculated the job count.
 
 
 #### How to create the highlighted bar charts?
