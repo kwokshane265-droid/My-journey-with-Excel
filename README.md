@@ -42,11 +42,15 @@ Essentially, there are 2 series being displayed, each showing a different color.
 
 ## [Project 2](Data Skills Analysis Project)
 
-All data used was processed with Power Query, Power Pivot and DAX. 
-Power Query was used to disect
+All data used was processed with PowerQuery and PowerPivot. 
+In **Power Query**, I duplicated the main dataset to isolate and clean the skills data. I removed all unnecessary columns—keeping only `Job ID` and the grouped skills—and then split those skill strings out into individual rows. This gave me two clean, lightweight tables: one for main job details and a secondary table linking each `Job ID` to its specific skills.
+
+In **Power Pivot**, I built a relational data model by creating a one-to-many relationship between the two tables using `Job ID`. Connecting them this way avoided a bloated dataset while allowing my Pivot Tables and slicers to stay synchronized. This setup made it seamless to cross-filter across roles, locations, and individual technical skills.
+
+This allowed me to produce the following graphs
+### Linear relationship between skills and Median Salary
 <img width="1175" height="438" alt="Screenshot 2026-09-02 233508" src="https://github.com/user-attachments/assets/a37602cc-ad92-43d4-aa9f-de8ffbe94a92" />
 
-<img width="952" height="380" alt="Screenshot 2026-09-02 233518" src="https://github.com/user-attachments/assets/67e0ebda-d560-473c-9275-53c668ccb9f5" />
 
 <img width="1322" height="400" alt="Screenshot 2026-09-02 233548" src="https://github.com/user-attachments/assets/eaacd2d3-b451-4cdc-a518-1d511674142a" />
 
