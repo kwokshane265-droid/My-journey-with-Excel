@@ -31,7 +31,19 @@ This project marks my first experience using Excel for data analysis. After comp
   )
  ) 
 ```
-The above formula was used to deliver the Output "Median Salary" and a similar formula was used to deliver "Job Count" (median was replaced with count)
+The above formula was used to deliver the Output "Median Salary".
+```
+=COUNT(
+  IF(
+   (jobs[job_title_short]=job_title_slot)*
+   (jobs[job_country]=job_country_slot)*
+   (ISNUMBER(SEARCH(type_slot,jobs[job_schedule_type]))),
+   jobs[salary_year_all]
+  )
+ ) 
+```
+The above formula is similar to previous and performs "Count" instead of "Median", which is what counted the job count.
+
 
 #### How to create the highlighted bar charts?
 <img width="1571" height="407" alt="Screenshot 2026-09-02 205625" src="https://github.com/user-attachments/assets/f4586ab6-f4cf-41c5-bf5a-338fba1375fd" />
