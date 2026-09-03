@@ -40,7 +40,7 @@ Essentially, there are 2 series being displayed, each showing a different color.
 
 ---
 
-## [Project 2](Data Skills Analysis Project)
+## [Project 2](<Data-Skills Analysis.xlsx>)
 
 All data used was processed with PowerQuery and PowerPivot. 
 In **Power Query**, I duplicated the main dataset to isolate and clean the skills data. I removed all unnecessary columns—keeping only `Job ID` and the grouped skills—and then split those skill strings out into individual rows. This gave me two clean, lightweight tables: one for main job details and a secondary table linking each `Job ID` to its specific skills.
