@@ -1,7 +1,7 @@
 # My journey with Excel
 
 This project marks my first experience using Excel for data analysis. After completing a guided course, I independently recreated two projects without video assistance: an interactive salary dashboard that compares median salaries by job role, country, and work schedule, and an in-demand skills analysis using Power Query, DAX, and Power Pivot to clean, organize, and model job-posting data. Together, these projects helped me develop practical Excel skills while identifying valuable data-industry skills based on demand and median salary.
-
+---
 ## [Project 1: Salary Dashboard](<My Data-Salary Dashboard.xlsx>) 
 
 <img width="1647" height="478" alt="Salary Dashbard" src="https://github.com/user-attachments/assets/00991168-072e-4c34-b6da-c2b42758514a" />
@@ -16,7 +16,7 @@ This project marks my first experience using Excel for data analysis. After comp
 - Excel formulas: Used dynamic IF statements and combined ISNUMBER with SEARCH to categorize data.
 - Created structured tables with conditional formatting to highlight relevant values.
 - Built map visualizations to compare salary data across locations.
-
+---
 #### How to find the specific salaries?
 <img width="1298" height="60" alt="Screenshot 2026-09-02 222536" src="https://github.com/user-attachments/assets/953c6dd7-60b0-4c06-b7c0-e2e6f693a919" />
 
@@ -48,11 +48,11 @@ In **Power Query**, I duplicated the main dataset to isolate and clean the skill
 <img width="787" height="507" alt="Screenshot 2026-09-03 155822" src="https://github.com/user-attachments/assets/c06825b9-6b19-46a3-b374-cb39c784f00e" />
 <img width="410" height="586" alt="Screenshot 2026-09-03 155847" src="https://github.com/user-attachments/assets/78371092-bd29-453c-86ca-8bb0300d4706" />
 
-
+---
 In **Power Pivot**, I built a relational data model by creating a one-to-many relationship between the two tables using `Job ID`. Connecting them this way avoided a bloated dataset while allowing my Pivot Tables and slicers to stay synchronized. This setup made it seamless to cross-filter across roles, locations, and individual technical skills.
 
 This allowed me to produce the following graphs
-
+---
 ### Linear relationship between kills and median salary
 <img width="1175" height="438" alt="Screenshot 2026-09-02 233508" src="https://github.com/user-attachments/assets/a37602cc-ad92-43d4-aa9f-de8ffbe94a92" />
 
@@ -61,7 +61,7 @@ This chart explores whether acquiring a broader range of skills leads to higher 
 * **More Skills Mean Higher Pay:** Compensation generally scales alongside technical breadth across entry- and mid-level roles, starting from Business Analysts ($85k; 3.3 skills) and rising as roles require broader software management.
 * **Data Engineers Need the Broadest Toolsets:** Data Engineering demands the highest tool volume overall, peaking with Senior Data Engineers (8.1 skills; $147.5k median) due to complex pipeline, database, and cloud infrastructure requirements.
 * **Domain Depth Beats Tool Quantity:** Senior Data Scientists command the highest market compensation ($155k median) while requiring a moderate skill count (5.3 skills), proving that deep technical expertise in specialized domains yields higher financial returns than accumulating a wide list of secondary tools.
-
+---
 ### Median salary and chance of requirement of top 10 skills
 <img width="1322" height="400" alt="Screenshot 2026-09-02 233548" src="https://github.com/user-attachments/assets/eaacd2d3-b451-4cdc-a518-1d511674142a" />
 
@@ -70,7 +70,7 @@ This chart evaluates the top 10 skills for each job title by comparing their med
 * **SQL and Excel Form the High-Demand Foundation:** SQL (52% likelihood; $92.5k median) and Excel (40% likelihood; $84.5k median) are the most frequently requested skills, proving that database querying and spreadsheet mechanics remain mandatory baseline competencies for Data Analysts.
 * **Python Commands the Top Salary Premium:** Python yields the highest median salary ($98.5k) among the top 10 skills while maintaining strong market demand (29% likelihood), showing that programming and automation capabilities unlock higher pay tiers.
 * **Niche Tools Offer Targeted Leverage:** Enterprise technologies like Oracle ($95k median; 7% likelihood) and Tableau ($95k median; 28% likelihood) offer above-average compensation, demonstrating that specialized data management and visualization tools carry strong market value even with lower overall posting frequency.
-
+---
 ### Likelihood of top 10 most common skills required of data-related jobs
 <img width="1450" height="442" alt="Screenshot 2026-09-02 233535" src="https://github.com/user-attachments/assets/396b1ddb-97e4-46a4-8a5e-5650c2a80a8b" />
 
