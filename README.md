@@ -52,15 +52,18 @@ In **Power Query**, I duplicated the main dataset to isolate and clean the skill
 In **Power Pivot**, I built a relational data model by creating a one-to-many relationship between the two tables using `Job ID`. Connecting them this way avoided a bloated dataset while allowing my Pivot Tables and slicers to stay synchronized. This setup made it seamless to cross-filter across roles, locations, and individual technical skills.
 
 This allowed me to produce the following graphs
-### Linear relationship between Skills and Median Salary
+
+### Linear relationship between kills and median salary
 <img width="1175" height="438" alt="Screenshot 2026-09-02 233508" src="https://github.com/user-attachments/assets/a37602cc-ad92-43d4-aa9f-de8ffbe94a92" />
+
+This chart explores whether acquiring a broader range of skills leads to higher compensation by plotting median salaries against the average number of skills requested per job posting across major data roles.
 
 * **More Skills Mean Higher Pay:** Compensation generally scales alongside technical breadth across entry- and mid-level roles, starting from Business Analysts ($85k; 3.3 skills) and rising as roles require broader software management.
 * **Data Engineers Need the Broadest Toolsets:** Data Engineering demands the highest tool volume overall, peaking with Senior Data Engineers (8.1 skills; $147.5k median) due to complex pipeline, database, and cloud infrastructure requirements.
 * **Domain Depth Beats Tool Quantity:** Senior Data Scientists command the highest market compensation ($155k median) while requiring a moderate skill count (5.3 skills), proving that deep technical expertise in specialized domains yields higher financial returns than accumulating a wide list of secondary tools.
 
+### Median salary and chance of requirement of top 10 skills
 <img width="1322" height="400" alt="Screenshot 2026-09-02 233548" src="https://github.com/user-attachments/assets/eaacd2d3-b451-4cdc-a518-1d511674142a" />
-
 
 This chart evaluates the top 10 Data Analyst skills by comparing their median salaries against the likelihood of each skill appearing in a job requirement, balancing overall market demand with compensation potential.
 
@@ -68,6 +71,11 @@ This chart evaluates the top 10 Data Analyst skills by comparing their median sa
 * **Python Commands the Top Salary Premium:** Python yields the highest median salary ($98.5k) among the top 10 skills while maintaining strong market demand (29% likelihood), showing that programming and automation capabilities unlock higher pay tiers.
 * **Niche Tools Offer Targeted Leverage:** Enterprise technologies like Oracle ($95k median; 7% likelihood) and Tableau ($95k median; 28% likelihood) offer above-average compensation, demonstrating that specialized data management and visualization tools carry strong market value even with lower overall posting frequency.
 
+### Likelihood of top 10 most common skills required of data-related jobs
 <img width="1450" height="442" alt="Screenshot 2026-09-02 233535" src="https://github.com/user-attachments/assets/396b1ddb-97e4-46a4-8a5e-5650c2a80a8b" />
 
+This chart highlights the top 10 most frequently requested skills for Data Engineers, ranking them by their likelihood of appearing in job descriptions to identify essential technical requirements for the role.
 
+* **SQL and Python Form the Core Engine:** SQL (49% likelihood) and Python (46% likelihood) lead by a massive margin, proving that strong database querying and scripting capabilities are mandatory foundational tools for building data pipelines.
+* **AWS Leads Cloud Infrastructure Requirements:** AWS is the most demanded cloud platform (30% likelihood), outpacing Azure (22% likelihood), reflecting strong market preference for cloud-native storage and compute environments.
+* **Big Data and Processing Tools Define modern Pipelines:** Technologies like Spark (22%), Snowflake (17%), Hadoop (12%), and Kafka (12%) highlight that handling large-scale distributed computing and real-time streaming data are standard operational expectations for Data Engineers.
