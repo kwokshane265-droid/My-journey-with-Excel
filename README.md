@@ -2,7 +2,7 @@
 
 This project marks my first experience using Excel for data analysis. After completing a guided course, I independently recreated two projects without video assistance: an interactive salary dashboard that compares median salaries by job role, country, and work schedule, and an in-demand skills analysis using Power Query, DAX, and Power Pivot to clean, organize, and model job-posting data. Together, these projects helped me develop practical Excel skills while identifying valuable data-industry skills based on demand and median salary.
 
-## [Project 1: Salary Dashboard](Salary DashBoard Project) 
+## [Project 1: Salary Dashboard](<My Data-Salary Dashboard.xlsx>) 
 
 <img width="1647" height="478" alt="Salary Dashbard" src="https://github.com/user-attachments/assets/00991168-072e-4c34-b6da-c2b42758514a" />
 
@@ -65,7 +65,7 @@ This chart explores whether acquiring a broader range of skills leads to higher 
 ### Median salary and chance of requirement of top 10 skills
 <img width="1322" height="400" alt="Screenshot 2026-09-02 233548" src="https://github.com/user-attachments/assets/eaacd2d3-b451-4cdc-a518-1d511674142a" />
 
-This chart evaluates the top 10 Data Analyst skills by comparing their median salaries against the likelihood of each skill appearing in a job requirement, balancing overall market demand with compensation potential.
+This chart evaluates the top 10 skills for each job title by comparing their median salaries against the likelihood of each skill appearing in a job requirement, balancing overall market demand with compensation potential. This case in particular is **Data Analyst**.
 
 * **SQL and Excel Form the High-Demand Foundation:** SQL (52% likelihood; $92.5k median) and Excel (40% likelihood; $84.5k median) are the most frequently requested skills, proving that database querying and spreadsheet mechanics remain mandatory baseline competencies for Data Analysts.
 * **Python Commands the Top Salary Premium:** Python yields the highest median salary ($98.5k) among the top 10 skills while maintaining strong market demand (29% likelihood), showing that programming and automation capabilities unlock higher pay tiers.
@@ -74,7 +74,7 @@ This chart evaluates the top 10 Data Analyst skills by comparing their median sa
 ### Likelihood of top 10 most common skills required of data-related jobs
 <img width="1450" height="442" alt="Screenshot 2026-09-02 233535" src="https://github.com/user-attachments/assets/396b1ddb-97e4-46a4-8a5e-5650c2a80a8b" />
 
-This chart highlights the top 10 most frequently requested skills for Data Engineers, ranking them by their likelihood of appearing in job descriptions to identify essential technical requirements for the role.
+This chart highlights the top 10 most frequently requested skills for each job role, ranking them by their likelihood of appearing in job descriptions to identify essential technical requirements for the role. This case in particular is **Data Engineer**.
 
 * **SQL and Python Form the Core Engine:** SQL (49% likelihood) and Python (46% likelihood) lead by a massive margin, proving that strong database querying and scripting capabilities are mandatory foundational tools for building data pipelines.
 * **AWS Leads Cloud Infrastructure Requirements:** AWS is the most demanded cloud platform (30% likelihood), outpacing Azure (22% likelihood), reflecting strong market preference for cloud-native storage and compute environments.
