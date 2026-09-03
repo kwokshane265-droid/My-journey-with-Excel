@@ -59,8 +59,14 @@ This allowed me to produce the following graphs
 * **Data Engineers Need the Broadest Toolsets:** Data Engineering demands the highest tool volume overall, peaking with Senior Data Engineers (8.1 skills; $147.5k median) due to complex pipeline, database, and cloud infrastructure requirements.
 * **Domain Depth Beats Tool Quantity:** Senior Data Scientists command the highest market compensation ($155k median) while requiring a moderate skill count (5.3 skills), proving that deep technical expertise in specialized domains yields higher financial returns than accumulating a wide list of secondary tools.
 
-
 <img width="1322" height="400" alt="Screenshot 2026-09-02 233548" src="https://github.com/user-attachments/assets/eaacd2d3-b451-4cdc-a518-1d511674142a" />
+
+
+This chart evaluates the top 10 Data Analyst skills by comparing their median salaries against the likelihood of each skill appearing in a job requirement, balancing overall market demand with compensation potential.
+
+* **SQL and Excel Form the High-Demand Foundation:** SQL (52% likelihood; $92.5k median) and Excel (40% likelihood; $84.5k median) are the most frequently requested skills, proving that database querying and spreadsheet mechanics remain mandatory baseline competencies for Data Analysts.
+* **Python Commands the Top Salary Premium:** Python yields the highest median salary ($98.5k) among the top 10 skills while maintaining strong market demand (29% likelihood), showing that programming and automation capabilities unlock higher pay tiers.
+* **Niche Tools Offer Targeted Leverage:** Enterprise technologies like Oracle ($95k median; 7% likelihood) and Tableau ($95k median; 28% likelihood) offer above-average compensation, demonstrating that specialized data management and visualization tools carry strong market value even with lower overall posting frequency.
 
 <img width="1450" height="442" alt="Screenshot 2026-09-02 233535" src="https://github.com/user-attachments/assets/396b1ddb-97e4-46a4-8a5e-5650c2a80a8b" />
 
