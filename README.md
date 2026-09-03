@@ -58,10 +58,9 @@ Essentially, there are 2 series being displayed, each showing a different color.
 All data used was processed with PowerQuery and PowerPivot. 
 In **Power Query**, I duplicated the main dataset to isolate and clean the skills data. I removed all unnecessary columns—keeping only `Job ID` and the grouped skills—and then split those skill strings out into individual rows. This gave me two clean, lightweight tables: one for main job details and a secondary table linking each `Job ID` to its specific skills.
 
-<img width="787" height="507" alt="Screenshot 2026-09-03 155822" src="https://github.com/user-attachments/assets/c06825b9-6b19-46a3-b374-cb39c784f00e" />
-<img width="410" height="586" alt="Screenshot 2026-09-03 155847" src="https://github.com/user-attachments/assets/78371092-bd29-453c-86ca-8bb0300d4706" />
+<img width="457" height="250" alt="Screenshot 2026-09-03 194251" src="https://github.com/user-attachments/assets/e62240cd-f525-4ebc-90ad-430d7900a358" />
+<img width="401" height="228" alt="Screenshot 2026-09-03 194501" src="https://github.com/user-attachments/assets/b136e456-e005-49f4-bfc1-5877e69cf21e" />
 
----
 In **Power Pivot**, I built a relational data model by creating a one-to-many relationship between the two tables using `Job ID`. Connecting them this way avoided a bloated dataset while allowing my Pivot Tables and slicers to stay synchronized. This setup made it seamless to cross-filter across roles, locations, and individual technical skills.
 
 This allowed me to produce the following graphs
