@@ -45,11 +45,16 @@ Essentially, there are 2 series being displayed, each showing a different color.
 All data used was processed with PowerQuery and PowerPivot. 
 In **Power Query**, I duplicated the main dataset to isolate and clean the skills data. I removed all unnecessary columns—keeping only `Job ID` and the grouped skills—and then split those skill strings out into individual rows. This gave me two clean, lightweight tables: one for main job details and a secondary table linking each `Job ID` to its specific skills.
 
+<img width="787" height="507" alt="Screenshot 2026-09-03 155822" src="https://github.com/user-attachments/assets/c06825b9-6b19-46a3-b374-cb39c784f00e" />
+<img width="410" height="586" alt="Screenshot 2026-09-03 155847" src="https://github.com/user-attachments/assets/78371092-bd29-453c-86ca-8bb0300d4706" />
+
+
 In **Power Pivot**, I built a relational data model by creating a one-to-many relationship between the two tables using `Job ID`. Connecting them this way avoided a bloated dataset while allowing my Pivot Tables and slicers to stay synchronized. This setup made it seamless to cross-filter across roles, locations, and individual technical skills.
 
 This allowed me to produce the following graphs
-### Linear relationship between skills and Median Salary
+### Linear relationship between Skills and Median Salary
 <img width="1175" height="438" alt="Screenshot 2026-09-02 233508" src="https://github.com/user-attachments/assets/a37602cc-ad92-43d4-aa9f-de8ffbe94a92" />
+Skills - Skills per job. 
 
 
 <img width="1322" height="400" alt="Screenshot 2026-09-02 233548" src="https://github.com/user-attachments/assets/eaacd2d3-b451-4cdc-a518-1d511674142a" />
