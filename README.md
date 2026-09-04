@@ -34,6 +34,8 @@ This project marks my first experience using Excel for data analysis. After comp
 The above formula was used to deliver the Output "Median Salary". For each category (job title, job country and job schedule), this formula would comb through the dataset and look for match with the options (the words in the orange boxes). It would only return values if all 3 categories matched the 3 different options and once those values were returned, a median would be calculated.
 
 The options (orange boxes) were given through data validation and each had a list of the unique items within each catgory. 
+
+#### How to find specific job counts?
 ```
 =COUNT(
   IF(
@@ -67,7 +69,7 @@ Essentially, there are 2 series being displayed, each showing a different color.
 ```
 First, the above formula was used to match categories to options like the previous formulas. Then an extra condition was added to the IF: The job platform had to be equal to the one stated in column M, which is the unique list of job platforms(currently this is focused on M2, the formula is replicated along M). 
 
-The meant that a count would displayed for each relevant job platform
+This meant that a count would displayed for each relevant job platform
 
 ```
 =XLOOKUP(
