@@ -75,18 +75,23 @@ This chart explores whether acquiring a broader range of skills leads to higher 
 * **Domain Depth Beats Tool Quantity:** Senior Data Scientists command the highest market compensation ($155k median) while requiring a moderate skill count (5.3 skills), proving that deep technical expertise in specialized domains yields higher financial returns than accumulating a wide list of secondary tools.
 ---
 ### Median salary and chance of requirement of top 10 skills
-<img width="1322" height="400" alt="Screenshot 2026-09-02 233548" src="https://github.com/user-attachments/assets/eaacd2d3-b451-4cdc-a518-1d511674142a" />
+<img width="683" height="345" alt="Screenshot 2026-09-04 093245" src="https://github.com/user-attachments/assets/8340d157-fcc0-4022-9b95-8579c090d4de" />
 
-This chart evaluates the top 10 skills for each job title by comparing their median salaries against the likelihood of each skill appearing in a job requirement, balancing overall market demand with compensation potential. This case in particular is **Data Analyst**.
+
+This chart evaluates the top 10 skills for each job title by comparing their median salaries against the likelihood of each skill appearing in a job requirement, balancing overall market demand with compensation potential. This takes median salary and skill likelihood into consideration.
+
+This case in particular shows the combined information of a **Data Analyst**.
 
 * **SQL and Excel Form the High-Demand Foundation:** SQL (52% likelihood; $92.5k median) and Excel (40% likelihood; $84.5k median) are the most frequently requested skills, proving that database querying and spreadsheet mechanics remain mandatory baseline competencies for Data Analysts.
 * **Python Commands the Top Salary Premium:** Python yields the highest median salary ($98.5k) among the top 10 skills while maintaining strong market demand (29% likelihood), showing that programming and automation capabilities unlock higher pay tiers.
 * **Niche Tools Offer Targeted Leverage:** Enterprise technologies like Oracle ($95k median; 7% likelihood) and Tableau ($95k median; 28% likelihood) offer above-average compensation, demonstrating that specialized data management and visualization tools carry strong market value even with lower overall posting frequency.
 ---
 ### Likelihood of top 10 most common skills required of data-related jobs
-<img width="1450" height="442" alt="Screenshot 2026-09-02 233535" src="https://github.com/user-attachments/assets/396b1ddb-97e4-46a4-8a5e-5650c2a80a8b" />
+<img width="593" height="393" alt="Screenshot 2026-09-04 093056" src="https://github.com/user-attachments/assets/0a4fa6da-b415-4515-94ec-729015756570" />
 
-This chart highlights the top 10 most frequently requested skills for each job role, ranking them by their likelihood of appearing in job descriptions to identify essential technical requirements for the role. This case in particular is **Data Engineer**.
+This chart highlights the top 10 most frequently requested skills for each job role, ranking them by their likelihood of appearing in job descriptions to identify essential technical requirements for the role. It takes the job title and country into account.
+
+This case in particular shows the top 10 skills necessary to be a **Data Engineer** in the **United States**
 
 * **SQL and Python Form the Core Engine:** SQL (49% likelihood) and Python (46% likelihood) lead by a massive margin, proving that strong database querying and scripting capabilities are mandatory foundational tools for building data pipelines.
 * **AWS Leads Cloud Infrastructure Requirements:** AWS is the most demanded cloud platform (30% likelihood), outpacing Azure (22% likelihood), reflecting strong market preference for cloud-native storage and compute environments.
