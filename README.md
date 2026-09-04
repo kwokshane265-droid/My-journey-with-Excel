@@ -53,6 +53,31 @@ Above is the method in which I created Bar charts that would have 1 data point h
 
 Essentially, there are 2 series being displayed, each showing a different color. One is responsible for all the "Non-focus" items. Another is responsible for ONLY the "Focus Item".
 
+#### How to find the best platform?
+```
+=COUNT(
+ IF(
+  (jobs[job_title_short]=job_title_slot)*
+  (jobs[job_country]=job_country_slot)*
+  (ISNUMBER(SEARCH(type_slot,jobs[job_schedule_type])))*
+  (jobs[job Platform]=M2),
+  jobs[salary_year_all]
+ )
+)
+```
+First, the above formula was used to match categories to options like the previous formulas. Then an extra condition was added to the IF: The job platform had to be equal to the one stated in column M, which is the unique list of job platforms(currently this is focused on M2, the formula is replicated along M). 
+
+The meant that a count would displayed for each relevant job platform
+
+```
+=XLOOKUP(
+ MAX(
+  'Data Validation'!$N$2:$N$594),
+ 'Data Validation'!$N$2:$N$594,
+ 'Data Validation'!$M$2#)
+```
+Then on the dashboard, the above formula was used to find the maximum count and return the corresponding job platform.
+
 ---
 
 ## [Project 2](<Data-Skills Analysis.xlsx>)
