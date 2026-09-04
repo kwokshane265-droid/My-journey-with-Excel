@@ -31,7 +31,7 @@ This project marks my first experience using Excel for data analysis. After comp
   )
  ) 
 ```
-The above formula was used to deliver the Output "Median Salary".
+The above formula was used to deliver the Output "Median Salary". For each category (job title, job country and job schedule), this formula would comb through the 
 ```
 =COUNT(
   IF(
@@ -63,10 +63,12 @@ In **Power Query**, I duplicated the main dataset to isolate and clean the skill
 
 In **Power Pivot**, I built a relational data model by creating a one-to-many relationship between the two tables using `Job ID`. Connecting them this way avoided a bloated dataset while allowing my Pivot Tables and slicers to stay synchronized. This setup made it seamless to cross-filter across roles, locations, and individual technical skills.
 
+<img width="718" height="191" alt="Screenshot 2026-09-04 093721" src="https://github.com/user-attachments/assets/4662b6f3-d53d-4d5f-ab14-531c4cdfd280" />
+
 This allowed me to produce the following graphs
 ---
 ### Linear relationship between kills and median salary
-<img width="1175" height="438" alt="Screenshot 2026-09-02 233508" src="https://github.com/user-attachments/assets/a37602cc-ad92-43d4-aa9f-de8ffbe94a92" />
+<img width="687" height="405" alt="Screenshot 2026-09-04 093501" src="https://github.com/user-attachments/assets/9af71115-613c-4121-a5e8-8d842091224d" />
 
 This chart explores whether acquiring a broader range of skills leads to higher compensation by plotting median salaries against the average number of skills requested per job posting across major data roles.
 
