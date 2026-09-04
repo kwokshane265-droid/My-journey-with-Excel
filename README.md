@@ -93,6 +93,7 @@ In **Power Pivot**, I built a relational data model by creating a one-to-many re
 <img width="718" height="191" alt="Screenshot 2026-09-04 093721" src="https://github.com/user-attachments/assets/4662b6f3-d53d-4d5f-ab14-531c4cdfd280" />
 
 This allowed me to produce the following graphs
+
 ---
 ### Linear relationship between kills and median salary
 <img width="687" height="405" alt="Screenshot 2026-09-04 093501" src="https://github.com/user-attachments/assets/9af71115-613c-4121-a5e8-8d842091224d" />
