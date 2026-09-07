@@ -117,6 +117,7 @@ This case in particular shows the combined information of a **Data Analyst**.
 * **SQL and Excel Form the High-Demand Foundation:** SQL (52% likelihood; $92.5k median) and Excel (40% likelihood; $84.5k median) are the most frequently requested skills, proving that database querying and spreadsheet mechanics remain mandatory baseline competencies for Data Analysts.
 * **Python Commands the Top Salary Premium:** Python yields the highest median salary ($98.5k) among the top 10 skills while maintaining strong market demand (29% likelihood), showing that programming and automation capabilities unlock higher pay tiers.
 * **Niche Tools Offer Targeted Leverage:** Enterprise technologies like Oracle ($95k median; 7% likelihood) and Tableau ($95k median; 28% likelihood) offer above-average compensation, demonstrating that specialized data management and visualization tools carry strong market value even with lower overall posting frequency.
+
 ---
 ### Likelihood of top 10 most common skills required of data-related jobs
 <img width="593" height="393" alt="Screenshot 2026-09-04 093056" src="https://github.com/user-attachments/assets/0a4fa6da-b415-4515-94ec-729015756570" />
