@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Journey with Excel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAF8F3;
+    --paper-alt:#F2EFE6;
+    --line:#DEDACB;
+    --ink:#1E211E;
+    --ink-soft:#5B5F56;
+    --green:#1F5C46;
+    --green-soft:#E7F0EA;
+    --amber:#C97A2B;
+    --amber-soft:#F7EAD6;
+    --blue:#2B5F8A;
+    --blue-soft:#E7EFF5;
+    --sans:'Inter', sans-serif;
+    --display:'Space Grotesk', sans-serif;
+    --mono:'JetBrains Mono', monospace;
+    --radius: 3px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.6;
+    padding-bottom:76px; /* space for sheet-tab nav */
+  }
+
+  img{max-width:100%; display:block; height:auto;}
+
+  a{color:var(--green);}
+
+  .wrap{
+    max-width:800px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:88px 0 56px;
+    border-bottom:1px solid var(--line);
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px);
+    background-size: 100% 42px;
+    background-position: 0 88px;
+  }
+  .hero .wrap{background:var(--paper);}
+
+  .namebox{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:0.03em;
+    color:var(--green);
+    background:var(--green-soft);
+    border:1px solid var(--green);
+    border-radius:var(--radius);
+    padding:3px 9px;
+    margin-bottom:22px;
+  }
+  .namebox .dot{width:6px;height:6px;border-radius:50%;background:var(--green);}
+
+  h1{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:clamp(2.2rem, 5vw, 3.1rem);
+    line-height:1.08;
+    margin:0 0 20px;
+    letter-spacing:-0.01em;
+  }
+
+  .hero p.lede{
+    font-size:1.1rem;
+    color:var(--ink-soft);
+    max-width:62ch;
+    margin:0 0 36px;
+  }
+
+  .hero p.lede b{color:var(--ink); font-weight:600;}
+
+  .formula-bar{
+    display:flex;
+    align-items:stretch;
+    border:1px solid var(--line);
+    background:#fff;
+    border-radius:var(--radius);
+    overflow:hidden;
+    margin-bottom:40px;
+  }
+  .formula-bar .fx{
+    font-family:var(--mono);
+    font-weight:600;
+    font-size:13px;
+    color:var(--green);
+    background:var(--green-soft);
+    padding:10px 14px;
+    border-right:1px solid var(--line);
+    display:flex;
+    align-items:center;
+  }
+  .formula-bar .val{
+    font-family:var(--mono);
+    font-size:13.5px;
+    padding:10px 14px;
+    color:var(--ink);
+    overflow-x:auto;
+    white-space:nowrap;
+  }
+
+  .stat-row{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+    background:#fff;
+  }
+  .stat-cell{
+    padding:16px 18px;
+    border-right:1px solid var(--line);
+  }
+  .stat-cell:last-child{border-right:none;}
+  .stat-cell .k{
+    display:block;
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    margin-bottom:6px;
+  }
+  .stat-cell .v{
+    display:block;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:1.05rem;
+    color:var(--ink);
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:64px 0;}
+  section.alt{background:var(--paper-alt); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+
+  .cellref{
+    display:inline-block;
+    font-family:var(--mono);
+    font-size:11.5px;
+    color:var(--ink-soft);
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:2px 8px;
+    margin-bottom:14px;
+  }
+
+  h2{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:1.85rem;
+    margin:0 0 8px;
+    letter-spacing:-0.01em;
+  }
+
+  .section-link{
+    font-family:var(--mono);
+    font-size:13px;
+    margin-bottom:28px;
+  }
+
+  h3{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:1.15rem;
+    margin:36px 0 14px;
+  }
+
+  p{margin:0 0 16px; max-width:74ch;}
+
+  ul, ol{margin:0 0 20px; padding-left:22px;}
+  li{margin-bottom:8px; max-width:70ch;}
+
+  .two-col{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    margin:24px 0 32px;
+  }
+
+  .lesson-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:18px 20px;
+    margin-bottom:14px;
+  }
+  .lesson-card b{display:block; font-family:var(--display); font-size:0.95rem; margin-bottom:4px;}
+
+  /* image cell frame */
+  figure{
+    margin:24px 0 32px;
+    position:relative;
+    border:1px solid var(--line);
+    background:#fff;
+    padding:4px;
+    border-radius:var(--radius);
+  }
+  figure::after{
+    content:"";
+    position:absolute;
+    width:8px; height:8px;
+    right:-1px; bottom:-1px;
+    background:var(--green);
+    border:1px solid var(--paper);
+  }
+  figure img{border-radius:1px;}
+  figcaption{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--ink-soft);
+    padding:8px 4px 2px;
+  }
+
+  /* formula block styled as formula bar */
+  .formula{
+    margin:20px 0 18px;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+    background:#fff;
+  }
+  .formula .head{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:var(--green-soft);
+    border-bottom:1px solid var(--line);
+    padding:7px 12px;
+    font-family:var(--mono);
+    font-size:11.5px;
+    color:var(--green);
+    letter-spacing:0.02em;
+  }
+  .formula .head .sq{width:7px;height:7px;background:var(--green);}
+  .formula pre{
+    margin:0;
+    padding:16px 18px;
+    font-family:var(--mono);
+    font-size:13px;
+    line-height:1.55;
+    overflow-x:auto;
+    color:var(--ink);
+    background:#fff;
+  }
+
+  .insight-block{
+    border-left:3px solid var(--amber);
+    background:var(--amber-soft);
+    padding:14px 18px;
+    border-radius:0 var(--radius) var(--radius) 0;
+    margin:22px 0 30px;
+  }
+  .insight-block ul{margin:0; padding-left:18px;}
+  .insight-block li{margin-bottom:10px;}
+  .insight-block b{color:var(--ink);}
+
+  .subhead{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--blue);
+    background:var(--blue-soft);
+    display:inline-block;
+    padding:2px 8px;
+    border-radius:var(--radius);
+    margin-bottom:10px;
+  }
+
+  /* ---------- TAKEAWAYS ---------- */
+  .takeaways{
+    background:var(--ink);
+    color:var(--paper);
+  }
+  .takeaways h2{color:#fff;}
+  .takeaways p{color:#D9D6C9; max-width:68ch; font-size:1.05rem;}
+  .takeaways .cellref{background:transparent; border-color:#43473F; color:#9A9D92;}
+
+  /* ---------- SHEET TAB NAV ---------- */
+  nav.sheet-tabs{
+    position:fixed;
+    left:0; right:0; bottom:0;
+    z-index:50;
+    background:var(--paper-alt);
+    border-top:1px solid var(--line);
+    display:flex;
+    align-items:flex-end;
+    gap:2px;
+    padding:8px 12px 0;
+    overflow-x:auto;
+  }
+  nav.sheet-tabs a{
+    font-family:var(--mono);
+    font-size:12.5px;
+    text-decoration:none;
+    color:var(--ink-soft);
+    background:var(--paper-alt);
+    border:1px solid var(--line);
+    border-bottom:none;
+    padding:9px 16px 8px;
+    border-radius:4px 4px 0 0;
+    white-space:nowrap;
+    transition:background .15s ease, color .15s ease;
+  }
+  nav.sheet-tabs a:hover{color:var(--ink);}
+  nav.sheet-tabs a.active{
+    background:var(--paper);
+    color:var(--green);
+    font-weight:600;
+    border-color:var(--line);
+    position:relative;
+    top:1px;
+  }
+  nav.sheet-tabs .plus{
+    font-family:var(--mono);
+    color:var(--ink-soft);
+    padding:9px 10px;
+    font-size:13px;
+  }
+
+  footer{
+    padding:40px 28px 96px;
+    text-align:left;
+    max-width:800px;
+    margin:0 auto;
+  }
+  footer p{
+    font-family:var(--mono);
+    font-size:12.5px;
+    color:var(--ink-soft);
+  }
+
+  @media (max-width:640px){
+    .hero{padding:56px 0 40px;}
+    .stat-row{grid-template-columns:1fr;}
+    .stat-cell{border-right:none; border-bottom:1px solid var(--line);}
+    .stat-cell:last-child{border-bottom:none;}
+    .two-col{grid-template-columns:1fr;}
+    section{padding:48px 0;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    nav.sheet-tabs a{transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="namebox"><span class="dot"></span>A1</span>
+    <h1>My journey with Excel</h1>
+    <p class="lede">
+      This project marks my first experience using Excel for data analysis. After completing a guided course,
+      I independently recreated two projects <b>without video assistance</b> — an interactive salary dashboard
+      and an in-demand skills analysis built with Power Query, DAX, and Power Pivot.
+    </p>
+
+    <div class="formula-bar">
+      <div class="fx">fx</div>
+      <div class="val">="Practical Excel skills" &amp; " + a data-backed answer to what to learn next"</div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-cell">
+        <span class="k">Projects</span>
+        <span class="v">2, built independently</span>
+      </div>
+      <div class="stat-cell">
+        <span class="k">Tools used</span>
+        <span class="v">Power Query · DAX · Power Pivot</span>
+      </div>
+      <div class="stat-cell">
+        <span class="k">Core skill</span>
+        <span class="v">Dynamic array formulas</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="overview">
+  <div class="wrap">
+    <span class="cellref">A2</span>
+    <h2>Overview</h2>
+    <p class="section-link" style="color:var(--ink-soft)">Two projects, one dataset of data-job postings.</p>
+    <p>
+      Together, these two projects helped me build practical Excel skills while identifying valuable
+      data-industry skills based on demand and median salary. The first project turns raw salary data into
+      an interactive dashboard; the second models job-posting data to find which skills actually pay.
+    </p>
+  </div>
+</section>
+
+<section id="salary" class="alt">
+  <div class="wrap">
+    <span class="cellref">B1</span>
+    <h2>Salary Dashboard Project</h2>
+    <p class="section-link"><a href="https://github.com/kwokshane265-droid/My-journey-with-Excel/tree/main/Salary%20DashBoard%20Project">View project files →</a></p>
+
+    <figure>
+      <img alt="Interactive salary dashboard showing median salary and job counts filtered by job title, country, and work schedule" src="https://github.com/user-attachments/assets/00991168-072e-4c34-b6da-c2b42758514a">
+      <figcaption>The finished dashboard — filterable by job title, country, and schedule</figcaption>
+    </figure>
+
+    <h3>Key objectives</h3>
+    <ul>
+      <li>Build an interactive Excel dashboard for exploring data-job salaries.</li>
+      <li>Compare median salaries across different job roles and countries.</li>
+      <li>Filter salary data by job title, location, and work schedule.</li>
+      <li>Present job-market information in a clear and accessible format.</li>
+    </ul>
+
+    <h3>Key lessons</h3>
+    <div class="lesson-card">
+      <b>Dynamic filtering</b>
+      Combined <code>IF</code> statements with <code>ISNUMBER</code> and <code>SEARCH</code> to categorize and filter data by criteria.
+    </div>
+    <div class="lesson-card">
+      <b>Structured tables</b>
+      Built structured tables with conditional formatting to highlight relevant values.
+    </div>
+    <div class="lesson-card">
+      <b>Map visualizations</b>
+      Compared salary data across locations using Excel's built-in map charts.
+    </div>
+
+    <h3>Formula breakdown</h3>
+
+    <span class="subhead">1 · Finding a specific median salary</span>
+    <figure>
+      <img alt="Data validation dropdowns for job title, country, and schedule type used as formula inputs" src="https://github.com/user-attachments/assets/953c6dd7-60b0-4c06-b7c0-e2e6f693a919">
+    </figure>
+    <div class="formula">
+      <div class="head"><span class="sq"></span>MEDIAN SALARY</div>
+      <pre>=MEDIAN(
+  IF(
+   (jobs[job_title_short]=job_title_slot)*
+   (jobs[job_country]=job_country_slot)*
+   (ISNUMBER(SEARCH(type_slot,jobs[job_schedule_type]))),
+   jobs[salary_year_all]
+  )
+)</pre>
+    </div>
+    <p>For each category — job title, job country, and job schedule — this formula scans the dataset for matches against the selected options (the orange boxes on the dashboard). It only returns a value when all three categories match, and a median is calculated from the results.</p>
+    <p>The dropdown options in the orange boxes are powered by data validation, each listing the unique items within its category.</p>
+
+    <span class="subhead">2 · Finding job counts</span>
+    <div class="formula">
+      <div class="head"><span class="sq"></span>JOB COUNT</div>
+      <pre>=COUNT(
+  IF(
+   (jobs[job_title_short]=job_title_slot)*
+   (jobs[job_country]=job_country_slot)*
+   (ISNUMBER(SEARCH(type_slot,jobs[job_schedule_type]))),
+   jobs[salary_year_all]
+  )
+)</pre>
+    </div>
+    <p>Same logic as the median formula above, but using <code>COUNT</code> instead of <code>MEDIAN</code> to calculate the number of matching job postings.</p>
+
+    <span class="subhead">3 · Highlighted bar charts</span>
+    <figure>
+      <img alt="Bar chart with one highlighted data point standing out in a different color from the rest of the series" src="https://github.com/user-attachments/assets/f4586ab6-f4cf-41c5-bf5a-338fba1375fd">
+    </figure>
+    <p>To highlight a single bar (left to right), the chart uses two data series: one covers all the "non-focus" items in one color, and a second covers only the "focus" item in a contrasting color.</p>
+
+    <span class="subhead">4 · Finding the best platform</span>
+    <div class="formula">
+      <div class="head"><span class="sq"></span>PLATFORM COUNT</div>
+      <pre>=COUNT(
+ IF(
+  (jobs[job_title_short]=job_title_slot)*
+  (jobs[job_country]=job_country_slot)*
+  (ISNUMBER(SEARCH(type_slot,jobs[job_schedule_type])))*
+  (jobs[job_platform]=M2),
+  jobs[salary_year_all]
+ )
+)</pre>
+    </div>
+    <p>This extends the earlier matching logic with one more condition: the job platform must equal the value in column M (a unique list of job platforms). This formula is copied across column M, producing a count of matching postings for each platform.</p>
+    <div class="formula">
+      <div class="head"><span class="sq"></span>TOP PLATFORM</div>
+      <pre>=XLOOKUP(
+ MAX('Data Validation'!$N$2:$N$594),
+ 'Data Validation'!$N$2:$N$594,
+ 'Data Validation'!$M$2#
+)</pre>
+    </div>
+    <p>On the dashboard itself, this formula finds the highest count from that list and returns the corresponding job platform — i.e., the platform with the most matching postings.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <span class="cellref">C1</span>
+    <h2>Data Skills Analysis Project</h2>
+    <p class="section-link"><a href="https://github.com/kwokshane265-droid/My-journey-with-Excel/tree/main/Data%20Skills%20Analysis%20Project">View project files →</a></p>
+
+    <h3>Key objectives</h3>
+    <ul>
+      <li>Clean and model raw job-posting data using Power Query and Power Pivot.</li>
+      <li>Identify the most in-demand skills for each data role.</li>
+      <li>Compare skill count, skill demand, and median salary to find where compensation and demand intersect.</li>
+    </ul>
+
+    <h3>Key lessons</h3>
+    <p><b>Power Query cleanup.</b> Duplicated the main dataset to isolate and clean the skills data — keeping only <code>Job ID</code> and the grouped skills, then splitting those skill strings into individual rows. This produced two clean, lightweight tables: one for job details, and one linking each <code>Job ID</code> to its specific skills.</p>
+
+    <div class="two-col">
+      <figure style="margin:0;">
+        <img alt="Power Query steps showing the job skills column split into individual rows" src="https://github.com/user-attachments/assets/e62240cd-f525-4ebc-90ad-430d7900a358">
+      </figure>
+      <figure style="margin:0;">
+        <img alt="Cleaned skills table linked to Job ID after Power Query transformation" src="https://github.com/user-attachments/assets/b136e456-e005-49f4-bfc1-5877e69cf21e">
+      </figure>
+    </div>
+
+    <p style="margin-top:28px;"><b>Power Pivot data modeling.</b> Built a one-to-many relationship between the two tables using <code>Job ID</code>. This avoided a bloated dataset while keeping pivot tables and slicers synchronized, making it seamless to cross-filter across roles, locations, and individual technical skills.</p>
+
+    <figure>
+      <img alt="Power Pivot data model showing a one-to-many relationship between the jobs table and skills table via Job ID" src="https://github.com/user-attachments/assets/4662b6f3-d53d-4d5f-ab14-531c4cdfd280">
+    </figure>
+
+    <h3>Insights</h3>
+
+    <span class="subhead">Skill count vs. median salary</span>
+    <figure>
+      <img alt="Scatter chart plotting median salary against average number of skills requested, by data role" src="https://github.com/user-attachments/assets/9af71115-613c-4121-a5e8-8d842091224d">
+    </figure>
+    <p>This chart explores whether acquiring a broader range of skills leads to higher compensation, plotting median salary against the average number of skills requested per job posting across major data roles.</p>
+    <div class="insight-block">
+      <ul>
+        <li><b>More skills generally mean higher pay.</b> Compensation scales alongside technical breadth across entry- and mid-level roles, starting from Business Analysts ($85k; 3.3 skills) and rising as roles require broader software management.</li>
+        <li><b>Data Engineers need the broadest toolset.</b> Data Engineering demands the highest tool volume overall, peaking with Senior Data Engineers (8.1 skills; $147.5k median) due to complex pipeline, database, and cloud infrastructure requirements.</li>
+        <li><b>Domain depth beats tool quantity.</b> Senior Data Scientists command the highest market compensation ($155k median) with a moderate skill count (5.3 skills) — deep expertise in a specialized domain pays more than accumulating a wide list of secondary tools.</li>
+      </ul>
+    </div>
+
+    <span class="subhead">Median salary vs. demand for top 10 skills (Data Analyst)</span>
+    <figure>
+      <img alt="Bar and line chart comparing median salary against likelihood of appearing in a job posting for the top 10 Data Analyst skills" src="https://github.com/user-attachments/assets/8340d157-fcc0-4022-9b95-8579c090d4de">
+    </figure>
+    <p>This chart evaluates the top 10 skills for each job title by comparing median salary against the likelihood of that skill appearing in a job posting — balancing market demand with compensation potential. The example below shows a Data Analyst.</p>
+    <div class="insight-block">
+      <ul>
+        <li><b>SQL and Excel form the high-demand foundation.</b> SQL (52% likelihood; $92.5k median) and Excel (40% likelihood; $84.5k median) are the most frequently requested skills — database querying and spreadsheet mechanics remain mandatory baseline competencies.</li>
+        <li><b>Python commands the top salary premium.</b> Python yields the highest median salary ($98.5k) among the top 10 skills while maintaining strong demand (29% likelihood) — programming and automation capabilities unlock higher pay tiers.</li>
+        <li><b>Niche tools offer targeted leverage.</b> Enterprise technologies like Oracle ($95k median; 7% likelihood) and Tableau ($95k median; 28% likelihood) command above-average compensation despite lower posting frequency — specialized tools carry strong market value.</li>
+      </ul>
+    </div>
+
+    <span class="subhead">Most common skills required (Data Engineer, United States)</span>
+    <figure>
+      <img alt="Bar chart ranking the top 10 most frequently requested skills for Data Engineer roles in the United States" src="https://github.com/user-attachments/assets/0a4fa6da-b415-4515-94ec-729015756570">
+    </figure>
+    <p>This chart ranks the top 10 most frequently requested skills for a role by likelihood of appearing in job descriptions, identifying essential technical requirements. The example below shows Data Engineer roles in the United States.</p>
+    <div class="insight-block">
+      <ul>
+        <li><b>SQL and Python form the core engine.</b> SQL (49% likelihood) and Python (46% likelihood) lead by a wide margin — strong database querying and scripting capability are foundational for building data pipelines.</li>
+        <li><b>AWS leads cloud infrastructure requirements.</b> AWS is the most in-demand cloud platform (30% likelihood), ahead of Azure (22% likelihood), reflecting a market preference for cloud-native storage and compute.</li>
+        <li><b>Big data and processing tools define modern pipelines.</b> Spark (22%), Snowflake (17%), Hadoop (12%), and Kafka (12%) show that distributed computing and real-time streaming are standard expectations for Data Engineers.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="takeaways" class="takeaways">
+  <div class="wrap">
+    <span class="cellref">D1</span>
+    <h2>Takeaways</h2>
+    <p>
+      Working through both projects independently — from raw data to a finished dashboard — reinforced how much
+      of "advanced Excel" comes down to a small set of tools used well: dynamic array formulas, structured data
+      modeling with Power Query and Power Pivot, and clear visual design. It also surfaced a practical,
+      data-backed answer to "what should I learn next": SQL, Python, and cloud platforms show up repeatedly as
+      the highest-leverage skills across data roles.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <p>My journey with Excel — a self-taught project log.</p>
+</footer>
+
+<nav class="sheet-tabs" id="tabs">
+  <a href="#overview" data-id="overview">Overview</a>
+  <a href="#salary" data-id="salary">Salary Dashboard</a>
+  <a href="#skills" data-id="skills">Skills Analysis</a>
+  <a href="#takeaways" data-id="takeaways">Takeaways</a>
+  <span class="plus">＋</span>
+</nav>
+
+<script>
+  const tabs = document.querySelectorAll('nav.sheet-tabs a');
+  const sections = Array.from(tabs).map(t => document.getElementById(t.dataset.id));
+
+  const setActive = (id) => {
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.id === id));
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setActive(entry.target.id);
+      }
+    });
+  }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+
+  sections.forEach(s => s && observer.observe(s));
+  setActive('overview');
+</script>
+
+</body>
+</html>
