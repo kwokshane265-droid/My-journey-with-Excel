@@ -3,7 +3,7 @@
 This project marks my first experience using Excel for data analysis. After completing a guided course, I independently recreated two projects without video assistance: an interactive salary dashboard that compares median salaries by job role, country, and work schedule, and an in-demand skills analysis using Power Query, DAX, and Power Pivot to clean, organize, and model job-posting data. Together, these projects helped me develop practical Excel skills while identifying valuable data-industry skills based on demand and median salary.
 
 ---
-## [Project 1: Salary Dashboard]([Salary DashBoard Project](https://github.com/kwokshane265-droid/My-journey-with-Excel/tree/main/Salary%20DashBoard%20Project)) 
+## ([Salary DashBoard Project](https://github.com/kwokshane265-droid/My-journey-with-Excel/tree/main/Salary%20DashBoard%20Project)) 
 
 <img width="1647" height="478" alt="Salary Dashbard" src="https://github.com/user-attachments/assets/00991168-072e-4c34-b6da-c2b42758514a" />
 
@@ -82,7 +82,7 @@ Then on the dashboard, the above formula was used to find the maximum count and 
 
 ---
 
-## [Project 2](<Data-Skills Analysis.xlsx>)
+## [Data Skills Analysis Project](https://github.com/kwokshane265-droid/My-journey-with-Excel/tree/main/Data%20Skills%20Analysis%20Project)
 
 All data used was processed with PowerQuery and PowerPivot. 
 In **Power Query**, I duplicated the main dataset to isolate and clean the skills data. I removed all unnecessary columns—keeping only `Job ID` and the grouped skills—and then split those skill strings out into individual rows. This gave me two clean, lightweight tables: one for main job details and a secondary table linking each `Job ID` to its specific skills.
